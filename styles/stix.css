@@ -1,0 +1,43 @@
+#menu2 {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  z-index: 99;
+}
+#menu2 .stixs {
+  transition: 0.2s ease-out;
+  background: white;
+  height: 2px;
+  margin: 6px 0;
+  border-radius: 14px;
+  filter: drop-shadow(3px 3px 2px black);
+}
+#menu2 .stixs:nth-child(1) {
+  width: 30px;
+}
+#menu2 .stixs:nth-child(2) {
+  width: 24px;
+}
+#menu2 .stixs:nth-child(3) {
+  width: 40px;
+}
+#menu2.active {
+  transition: 0.2s ease-out;
+  background: #808080a6;
+  padding: 3px;
+  border-radius: 20px;
+}
+#menu2.active .stixs:nth-child(1) {
+  width: 30px;
+  transform: rotate(45deg) translate(5px, 5px);
+}
+#menu2.active .stixs:nth-child(2) {
+  width: 24px;
+  opacity: 0;
+}
+#menu2.active .stixs:nth-child(3) {
+  width: 30px;
+  transform: rotate(-45deg) translate(5px, -6px);
+}

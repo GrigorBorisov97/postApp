@@ -1,0 +1,629 @@
+body {
+  background: url(../images/wall.jfif);
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  font-family: Montserrat;
+  text-shadow: 2px 2px 2px black;
+  text-align: center;
+  color: white !important;
+  perspective: 555px;
+}
+#phone {
+  border-radius: 36px;
+  height: 14.4cm;
+  width: 7.1cm;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(-6deg);
+  background: linear-gradient(#000, #363636);
+  box-shadow: 47px 20px 117px black;
+}
+#phoneCamera {
+  width: 4cm;
+  height: 11px;
+  position: absolute;
+  border: 3px solid #b4b4b4;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-color: #333;
+  z-index: 99999;
+  border-top: 0px solid #333;
+  border-radius: 0px 0px 10px 10px;
+  background: #010101;
+}
+#phoneCamera #camera {
+  border: 3px solid white;
+  border-radius: 36px;
+  border: 2px solid white;
+  padding: 1px;
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: -6px;
+  left: 73%;
+}
+#phoneCamera #speaker {
+  border: 3px solid white;
+  border-radius: 36px;
+  border: 2px solid white;
+  width: 40px;
+  height: 3px;
+  top: -5px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#phoneScreen {
+  border: 3px solid white;
+  border-radius: 36px;
+  border-color: #b4b4b4;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  margin: 10px;
+  border-radius: 29px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+#phoneScreen #greenDiv {
+  background: url(../images/greenWall.jpg);
+  width: 90%;
+  top: 33px;
+  height: 75%;
+  background-size: cover;
+  margin-top: -20px;
+  position: fixed;
+  border-radius: 26px;
+}
+#phoneScreen #greenDiv #menu {
+  width: 29px;
+  filter: invert(1) drop-shadow(2px 2px 1px black);
+  position: absolute;
+  left: 10px;
+  top: 17px;
+  cursor: pointer;
+}
+#phoneScreen #greenDiv h3 {
+  position: relative;
+  top: 90px;
+}
+#phoneScreen #greenDiv h6 {
+  position: relative;
+  top: 91px;
+}
+#phoneScreen #greenDiv #input {
+  background: #7ac391b3;
+  padding: 7px 16px;
+  border: noe;
+  border: none;
+  border-radius: 30px;
+  text-shadow: 2px 2px 2px black;
+  outline: none;
+  top: 113px;
+  position: relative;
+}
+#phoneScreen #greenDiv #input::placeholder {
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+#phoneScreen #greenDiv #iconHolder {
+  display: flex;
+  top: 168px;
+  position: relative;
+  justify-content: space-evenly;
+}
+#phoneScreen #greenDiv #iconHolder p {
+  margin: 10px 0;
+  font-size: 11px;
+  font-weight: 600;
+}
+#phoneScreen #greenDiv #iconHolder .icons {
+  background: #0000006b;
+  border-radius: 50%;
+  display: inline-flex;
+  flex-direction: column-reverse;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+}
+#phoneScreen #greenDiv #iconHolder .icons i {
+  font-size: 15px;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px black;
+}
+#phoneScreen #greenDiv #iconHolder .icons:hover {
+  background: #ffffff9c;
+}
+#phoneScreen #whiteDiv {
+  background: white;
+  width: 100%;
+  border-radius: 20px;
+  margin-top: -20px;
+  z-index: 999;
+  position: absolute;
+  margin-top: 154%;
+}
+#phoneScreen #whiteDiv #slider {
+  border: 3px solid #88c99c;
+  border-radius: 36px;
+  width: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+}
+#phoneScreen #whiteDiv h2 {
+  color: #333;
+  text-shadow: none;
+  font-size: 15px;
+  border-bottom: 3px solid orange;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 6px;
+}
+#phoneScreen #whiteDiv .imageAndText {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  text-shadow: none !important;
+  margin: 20px 0px 0 0px;
+  padding: 3px 10px;
+  border-bottom: 1px solid #e8e8e8;
+}
+#phoneScreen #whiteDiv .imageAndText img {
+  max-width: 100px;
+  max-height: 100px;
+}
+#phoneScreen #whiteDiv .imageAndText h3 {
+  font-size: 16px;
+}
+#phoneScreen #whiteDiv .imageAndText h4 {
+  font-size: 12px;
+  color: darkgray;
+  width: 110px;
+  margin-left: 10px;
+  display: inline-block;
+  word-break: break-word;
+}
+#phoneScreen #whiteDiv .imageAndText h4::first-letter {
+  text-transform: uppercase;
+}
+#articleMenu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #ddd;
+  z-index: 999;
+  transform: translateX(100%);
+  box-shadow: unset;
+  filter: unset;
+  font-size: 20px;
+  color: #333;
+  text-shadow: none;
+  font-family: cursive;
+  transition: 0.2s ease-out;
+}
+#articleMenu #backButton {
+  position: absolute;
+  top: 20px;
+  left: 26px;
+  font-size: 18px;
+  text-shadow: 0px 0px 6px black;
+  cursor: pointer;
+  color: white;
+}
+#articleMenu #articleHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#articleMenu #articleHeader h1 {
+  font-size: 20px;
+  margin: 10px;
+}
+#articleMenu #articleHeader i {
+  color: orangered;
+  font-size: 2em;
+  filter: drop-shadow(2px 2px 2px #a2a2a2);
+  cursor: pointer;
+}
+#articleMenu p {
+  font-size: 12px;
+  font-weight: 100;
+  font-family: auto;
+  margin: 12px;
+}
+#articleMenu #autor {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+#articleMenu #autor img {
+  width: 50px;
+  height: 50px;
+  border-radius: 59%;
+}
+#articleMenu #autor #details {
+  display: flex;
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#articleMenu #autor #details h3 {
+  font-size: 19px;
+  margin: unset;
+}
+#articleMenu #autor #details h5 {
+  font-size: 13px;
+  margin: unset;
+}
+#articleMenu #iconsAutor {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+#articleMenu #iconsAutor .icons {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#articleMenu #iconsAutor .icons span {
+  font-size: 12px;
+}
+#articleMenu #iconsAutor .icons:nth-child(1):hover i {
+  color: yellowgreen;
+}
+#articleMenu #iconsAutor .icons:nth-child(2):hover i {
+  color: orangered;
+}
+#articleMenu #iconsAutor .icons:nth-child(3):hover i {
+  color: gold;
+}
+#articleMenu.active {
+  transform: translateX(0);
+}
+#settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background: #e5e5e5;
+  z-index: 999;
+  color: #333;
+  text-shadow: none;
+  transform: translateX(100%);
+  transition: 0.2s ease-out;
+}
+#settings.active {
+  transform: translateX(0);
+  box-shadow: -16px -2px 36px -16px #161616;
+}
+#settings #nav {
+  height: 20%;
+  background: url(https://wallpaperstock.net/wallpapers/thumbs1/43646hd.jpg);
+  background-size: 240%;
+  background-position: 173% 48%;
+  border-radius: 0 0 19px 19px;
+  box-shadow: 2px 2px 8px #5d5e5b;
+}
+#settings #nav img {
+  width: 80px;
+  position: relative;
+  top: 25px;
+  border-radius: 50%;
+  filter: drop-shadow(2px 4px 6px #222);
+}
+#settings #nav #closeSettings {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  filter: drop-shadow(2px 4px 6px black);
+  cursor: pointer;
+}
+#settings main {
+  margin-top: 40px;
+}
+#settings main .settingHolder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 20px;
+}
+#settings main .settingHolder i {
+  transition: 0.2s ease-out;
+}
+#settings main .settingHolder i.active {
+  transform: rotateX(180deg);
+}
+#settings main .settingHolder .textAndIcons {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#settings main .settingHolder .textAndIcons img {
+  width: 28px;
+  margin-right: 10px;
+}
+#settings main .settingHolder .textAndIcons h3 {
+  font-size: 14px;
+  margin: 0;
+}
+#settings main .ToggledItem {
+  box-shadow: inset 0px 11px 8px -10px #98be9563, inset 0px -11px 8px -10px #98be9563;
+  background: #e3e3e3;
+}
+#settings main .ToggledItem .options {
+  display: flex;
+  justify-content: space-between;
+  padding: 11px;
+}
+#hiddenMenu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  border-radius: 25px;
+  z-index: 20;
+  background: #000000ba;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: 0.2s ease-out;
+}
+#hiddenMenu .item {
+  cursor: pointer;
+  margin: 15px 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+#hiddenMenu .item:nth-child(1) {
+  margin-top: 35%;
+}
+#hiddenMenu .item i {
+  color: white;
+  background: #349255;
+  padding: 11px;
+  font-size: 14px;
+  border-radius: 59%;
+  text-shadow: none;
+}
+#hiddenMenu .item span {
+  margin-left: 20px;
+}
+#hiddenMenu.active {
+  visibility: visible;
+  opacity: 1;
+  box-shadow: -16px -2px 36px -16px #161616;
+}
+@media only screen and (max-width: 900px) {
+  #phone {
+    border-radius: 36px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: unset;
+    background: unset;
+    box-shadow: unset;
+  }
+  #phoneCamera {
+    display: none;
+  }
+  #phoneScreen {
+    border: 0px solid white;
+    border-radius: 0 !important;
+    border-color: #b4b4b4;
+    position: absolute;
+    background: unset;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    margin: unset;
+    border-radius: 29px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  #phoneScreen #greenDiv {
+    background: url(../images/greenWall.jpg);
+    width: 100%;
+    top: unset;
+    height: 100vh;
+    background-size: cover;
+    margin-top: unset;
+    position: fixed;
+    border-radius: unset;
+  }
+  #phoneScreen #greenDiv h3 {
+    font-size: 3rem;
+  }
+  #phoneScreen #greenDiv h6 {
+    top: 102px;
+    font-size: 1.5rem;
+  }
+  #phoneScreen #greenDiv #input {
+    padding: 10px 38px;
+    width: 72%;
+    font-size: 1.5rem;
+    top: 135px;
+  }
+  #phoneScreen #greenDiv #iconHolder {
+    top: 200px;
+  }
+  #phoneScreen #greenDiv #iconHolder .icons {
+    width: 54px;
+    height: 54px;
+  }
+  #phoneScreen #greenDiv #iconHolder .icons i {
+    font-size: 18px;
+  }
+  #phoneScreen #greenDiv #iconHolder p {
+    font-size: 1.3rem;
+  }
+  #phoneScreen #whiteDiv {
+    margin-top: 117%;
+    border-radius: 20px 20px 0 0 !important;
+  }
+  #phoneScreen #whiteDiv #slider {
+    border: 4px solid #88c99c;
+    width: 70px;
+    top: -24px;
+  }
+  #phoneScreen #whiteDiv h2 {
+    font-size: 2.5rem;
+    border-bottom: 4px solid orange;
+    width: 60px;
+  }
+  #phoneScreen #whiteDiv .imageAndText img {
+    height: 120px;
+    width: 120px;
+    margin-left: 15px;
+    border-radius: 8px;
+  }
+  #phoneScreen #whiteDiv .imageAndText .text {
+    width: 70%;
+    width: -webkit-fill-available;
+  }
+  #phoneScreen #whiteDiv .imageAndText .text h3 {
+    font-size: 1.8rem;
+    margin: 10px;
+    display: block;
+    width: unset;
+    text-align: center;
+  }
+  #phoneScreen #whiteDiv .imageAndText .text h4 {
+    font-size: 1.5rem;
+    width: unset;
+    margin: 16px;
+  }
+  #articleMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  #articleMenu #backButton {
+    transform: scale(1.5);
+    top: 40px;
+  }
+  #articleMenu img {
+    max-width: 100%;
+    display: none;
+  }
+  #articleMenu #forMobileView {
+    width: 100%;
+    height: 265px;
+    margin-bottom: 0;
+    background-size: cover !important;
+    background-position-y: 10%;
+  }
+  #articleMenu #articleHeader {
+    font-size: 2.7rem !important;
+    font-family: unset;
+  }
+  #articleMenu p {
+    font-size: 2rem;
+  }
+  #articleMenu #autor img {
+    width: 70px;
+    height: 70px;
+    display: block;
+  }
+  #articleMenu #autor #details h3 {
+    font-size: 2.3rem;
+  }
+  #articleMenu #autor #details h5 {
+    font-size: 1.6rem;
+  }
+  #articleMenu #iconsAutor {
+    margin-top: 18px;
+    margin-bottom: 100px;
+  }
+  #articleMenu #iconsAutor .icons span {
+    font-size: 1.4rem;
+  }
+  #articleMenu #iconsAutor .icons i {
+    transform: scale(1.8);
+    margin-bottom: 15px;
+  }
+  #settings {
+    height: 100vh;
+  }
+  #settings #nav {
+    display: block;
+    height: 125px;
+  }
+  #settings #nav img {
+    width: 120px;
+    position: relative;
+    top: 50px;
+  }
+  #settings #nav #closeSettings {
+    top: 40px;
+    font-size: 3rem;
+  }
+  #settings main .settingHolder {
+    margin: 20px 25px;
+  }
+  #settings main .settingHolder .textAndIcons h3 {
+    font-size: 2rem;
+    color: #3c3c3c;
+  }
+  #settings main .settingHolder .textAndIcons img {
+    width: 40px;
+    margin-right: 25px;
+  }
+  #settings main .ToggledItem .options span {
+    font-size: 2rem;
+  }
+  #hiddenMenu {
+    border-radius: 0 !important;
+  }
+  #hiddenMenu .item {
+    margin: 24px 35px;
+  }
+  #hiddenMenu .item i {
+    padding: 16px;
+    font-size: 20px;
+  }
+  #hiddenMenu .item span {
+    margin-left: 30px;
+    font-size: 1.8rem;
+  }
+  #menu2 {
+    transform: scale(1.22);
+  }
+}
+.lock-screen {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
